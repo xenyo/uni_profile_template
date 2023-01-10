@@ -130,8 +130,3 @@ install:
   - views
   - paragraphs
   - twigsuggest
-config_devel:
-  install:
-    - core.date_format.eduhk_date
-    - system.menu.eduhk-footer
-    - system.menu.eduhk-header
