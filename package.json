@@ -1,0 +1,26 @@
+{
+  "name": "uni_profile_template",
+  "private": true,
+  "browserslist": "defaults",
+  "scripts": {
+    "start": "nodemon server.js --ext twig,css,js,json",
+    "watch": "rimraf .parcel-cache && nodemon --ext mjs,scss --exec \"npm run compile\"",
+    "build": "rimraf .parcel-cache && npm run compile",
+    "compile": "parcel build \"**/[^_]*.{mjs,scss}\" --dist-dir . --no-content-hash",
+    "cde": "find -type f -name '*.info.yml' -exec grep -l config_devel: {} \\; | xargs -I{} basename {} .info.yml | xargs -L1 drush cde"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "@xenyo/parcel-config": "^1.5.0",
+    "express": "^4.18.2",
+    "glob": "^8.0.3",
+    "nodemon": "^2.0.20",
+    "parcel": "^2.7.0",
+    "rimraf": "^3.0.2",
+    "twig": "^1.15.4"
+  },
+  "dependencies": {
+    "@xenyo/normalize": "^1.0.0",
+    "@xenyo/sass-utils": "^1.5.1"
+  }
+}

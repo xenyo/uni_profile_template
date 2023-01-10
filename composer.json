@@ -1,0 +1,14 @@
+{
+  "name": "xenyo/uni_profile_template",
+  "type": "drupal-profile",
+  "authors": [
+    {
+      "name": "Parkle Lee",
+      "email": "parkle.lee@xenyo.com"
+    }
+  ],
+  "require": {
+    "xenyo/uni_theme": "^1.0",
+    "xenyo/uni": "^1.0"
+  }
+}

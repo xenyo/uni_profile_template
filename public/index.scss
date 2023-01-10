@@ -1,0 +1,22 @@
+@use 'sass-utils' as *;
+
+.env {
+  padding: 60px 0;
+
+  @include below($md) {
+    padding: 40px 0;
+  }
+}
+
+.env__header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.env__main {
+  margin-top: 60px;
+
+  @include below($md) {
+    margin-top: 40px;
+  }
+}

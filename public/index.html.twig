@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ hook }}</title>
+
+  <link rel="stylesheet" href="/public/index.css">
+
+  {% if css %}<link rel="stylesheet" href="{{ css }}">{% endif %}
+</head>
+<body>
+  <div class="env">
+    <div class="env__header">
+      <div class="uni-wrapper">
+        <h2><a href="/">{{ hook ?: 'EdUHK Profile Patterns' }}</a></h2>
+      </div>
+    </div>
+
+    <div class="env__main">
+      <div class="uni-wrapper{{ wrapper ? ' ' ~ wrapper }}">
+        {% if html %}
+          {% include html %}
+        {% else %}
+          <ul>
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <script>var Drupal = { behaviors: {} };</script>
+
+  {% if js %}<script src="{{ js }}"></script>{% endif %}
+
+  <script>Object.values(Drupal.behaviors).forEach(behavior => behavior.attach());</script>
+</body>
+</html>
